@@ -22,11 +22,21 @@ public class PersonController {
         return this.people;
     }
 
+    @GetMapping ("/get/{id}")
+    public Person getPerson(@PathVariable int id){ // pulls id from the path (url)
+        return this.people.get(id);
+    }
+
+    @DeleteMapping("/remove/{id}")
+    public Person removePerson(@PathVariable int id){
+        return this.people.remove(id);
+    }
 
     @PostMapping("/create")
-    public Person addPerson(@RequestBody Person person){
+    public Person addPerson(@RequestBody Person person){ // pull person from the body of the request
         this.people.add(person); // add a new person to the list
         return this.people.get(this.people.size() -1); // return the last person in the list
 
     }
+
 }
