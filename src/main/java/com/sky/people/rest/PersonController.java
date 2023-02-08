@@ -17,6 +17,12 @@ public class PersonController {
         return "Hello, World!";
     }
 
+    @RequestMapping(value = "listAll", method = RequestMethod.GET)
+    public List<Person> listAll() {
+        return this.people;
+    }
+
+
     @PostMapping("/create")
     public Person addPerson(@RequestBody Person person){
         this.people.add(person); // add a new person to the list
