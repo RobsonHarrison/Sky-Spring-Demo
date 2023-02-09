@@ -21,7 +21,7 @@ public class PersonServiceDB implements PersonService{
     }
 
     @Override
-    public Person update(int id, String name, int age, String job) {
+    public Person update(int id, String name, Integer age, String job) {
         return null;
     }
 

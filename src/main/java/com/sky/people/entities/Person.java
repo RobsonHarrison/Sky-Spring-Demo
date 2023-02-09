@@ -2,7 +2,7 @@ package com.sky.people.entities;
 
 public class Person {
 
-    public Person(String name, int age, String job) {
+    public Person(String name, Integer age, String job) {
         this.name = name;
         this.age = age;
         this.job = job;
